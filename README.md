@@ -3,7 +3,7 @@
 
 Enlace a la App en vivo (Demo)
 https://github.com/santnier92/mi-app-tareas
-
+---
 ✨ Características Principales
 Esta aplicación implementa una funcionalidad CRUD (Crear, Leer, Actualizar, Borrar) completa, e incluye:
 
