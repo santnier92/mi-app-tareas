@@ -9,50 +9,50 @@ Esta aplicación implementa una funcionalidad CRUD (Crear, Leer, Actualizar, Bor
 
 Autenticación de Usuarios:
 
-Registro de nuevas cuentas de usuario.
+- Registro de nuevas cuentas de usuario.
 
-Inicio de sesión (Login) con cuentas existentes.
+- Inicio de sesión (Login) con cuentas existentes.
 
-Rutas protegidas: solo los usuarios autenticados pueden acceder al panel de tareas.
+- Rutas protegidas: solo los usuarios autenticados pueden acceder al panel de tareas.
 
 Gestión de Tareas:
 
-Crear nuevas tareas especificando título, descripción, fecha de vencimiento y prioridad (Alta, Media, Baja).
+- Crear nuevas tareas especificando título, descripción, fecha de vencimiento y prioridad (Alta, Media, Baja).
 
-Visualizar todas las tareas organizadas en un tablero Kanban de tres columnas:
+- Visualizar todas las tareas organizadas en un tablero Kanban de tres columnas:
 
-Pendientes
+- Pendientes
 
-En Progreso
+- En Progreso
 
-Completadas
+- Completadas
 
 Actualizar (Editar):
 
-Mover tareas entre estados (ej. de "Pendiente" a "En Progreso").
+- Mover tareas entre estados (ej. de "Pendiente" a "En Progreso").
 
-Editar el contenido completo de una tarea (título, descripción, etc.) a través de un modal.
+- Editar el contenido completo de una tarea (título, descripción, etc.) a través de un modal.
 
 Eliminar tareas.
 
 Búsqueda y Filtrado:
 
-Un campo de búsqueda en tiempo real que filtra tareas por título o descripción.
+- Un campo de búsqueda en tiempo real que filtra tareas por título o descripción.
 
-Un filtro desplegable para ver tareas por prioridad.
+- Un filtro desplegable para ver tareas por prioridad.
 
 🛠️ Tecnologías Utilizadas
 Este proyecto fue construido utilizando un stack moderno de JavaScript:
 
-Frontend: React.js (creado con Vite)
+- Frontend: React.js (creado con Vite)
 
-Routing: React Router DOM
+- Routing: React Router DOM
 
-Backend como Servicio (BaaS): Firebase
+- Backend como Servicio (BaaS): Firebase
 
-Autenticación: Firebase Authentication (para manejo de usuarios)
+- Autenticación: Firebase Authentication (para manejo de usuarios)
 
-Base de Datos: Cloud Firestore (base de datos NoSQL en tiempo real)
+- Base de Datos: Cloud Firestore (base de datos NoSQL en tiempo real)
 
 Estilos: CSS3 (con estilos modulares en el archivo index.css)
 
@@ -72,23 +72,23 @@ Bash
 npm install
 Configura Firebase:
 
-Ve a la Consola de Firebase y crea un nuevo proyecto.
+- Ve a la Consola de Firebase y crea un nuevo proyecto.
 
-Habilita dos servicios:
+- Habilita dos servicios:
 
-Authentication (con el proveedor "Email/Contraseña").
+1. Authentication (con el proveedor "Email/Contraseña").
 
-Firestore Database (en modo de prueba).
+2. Firestore Database (en modo de prueba).
 
-En la configuración de tu proyecto, registra una nueva "Web App" (</>).
+- En la configuración de tu proyecto, registra una nueva "Web App" (</>).
 
-Firebase te dará un objeto de configuración firebaseConfig.
+- Firebase te dará un objeto de configuración firebaseConfig.
 
-Crea tu archivo de entorno:
+4. Crea tu archivo de entorno:
 
-En la carpeta src/, crea un archivo llamado firebaseConfig.js.
+- En la carpeta src/, crea un archivo llamado firebaseConfig.js.
 
-Pega el siguiente código y llénalo con los datos del paso anterior:
+- Pega el siguiente código y llénalo con los datos del paso anterior:
 
 JavaScript
 
@@ -113,15 +113,15 @@ const app = initializeApp(firebaseConfig);
 // Exportar servicios
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-Crea el Índice de Firestore (¡Importante!)
+5. Crea el Índice de Firestore (¡Importante!)
 
-La primera vez que ejecutes la app y vayas al dashboard, la lista de tareas fallará.
+- La primera vez que ejecutes la app y vayas al dashboard, la lista de tareas fallará.
 
-Abre la consola de desarrollador (F12) y busca un error de Firestore que incluya un enlace para crear un índice.
+- Abre la consola de desarrollador (F12) y busca un error de Firestore que incluya un enlace para crear un índice.
 
-Haz clic en ese enlace, crea el índice y espera 2-3 minutos. (El índice es necesario para la consulta where("userId", "==", ...) orderBy("createdAt", ...)).
+- Haz clic en ese enlace, crea el índice y espera 2-3 minutos. (El índice es necesario para la consulta where("userId", "==", ...) orderBy("createdAt", ...)).
 
-¡Ejecuta la aplicación!
+6. ¡Ejecuta la aplicación!
 
 Bash
 
