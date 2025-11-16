@@ -40,7 +40,7 @@ Búsqueda y Filtrado:
 - Un campo de búsqueda en tiempo real que filtra tareas por título o descripción.
 
 - Un filtro desplegable para ver tareas por prioridad.
-
+---
 🛠️ Tecnologías Utilizadas
 Este proyecto fue construido utilizando un stack moderno de JavaScript:
 
@@ -55,7 +55,7 @@ Este proyecto fue construido utilizando un stack moderno de JavaScript:
 - Base de Datos: Cloud Firestore (base de datos NoSQL en tiempo real)
 
 Estilos: CSS3 (con estilos modulares en el archivo index.css)
-
+---
 ⚙️ Cómo Ejecutar este Proyecto Localmente
 Si deseas clonar y ejecutar esta aplicación en tu máquina local, sigue estos pasos:
 
