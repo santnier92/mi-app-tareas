@@ -63,8 +63,8 @@ Clona el repositorio:
 
 Bash
 
-git clone https://github.com/santnier92/mi-app-tareas.git
-cd C:\Users\stiag\Documents\Archivos Santi\Universidad trabajos y sesiones\Sexto semestre\Herramientas de Software\Actividad 6\mi-app-tareas
+- git clone https://github.com/santnier92/mi-app-tareas.git
+- cd C:\Users\stiag\Documents\Archivos Santi\Universidad trabajos y sesiones\Sexto semestre\Herramientas de Software\Actividad 6\mi-app-tareas
 Instala las dependencias:
 
 Bash
