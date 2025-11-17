@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// 1. AÑADIMOS 'Navigate' A LA IMPORTACIÓN
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './index.css';
 
 // --- Importamos el AuthProvider ---
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        // 2. AÑADIMOS LA RUTA RAÍZ (/) PARA REDIRIGIR
+        path: '/',
+        element: <Navigate to="/login" replace />,
+      },
+      {
         path: '/login',
         element: <LoginPage />,
       },
@@ -28,7 +34,6 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        // 2. Envolver el elemento
         element: (
           <ProtectedRoute>
             <DashboardPage />
